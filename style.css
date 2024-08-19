@@ -11,14 +11,14 @@
 body{
     width: 100%;
     height:450vh;
-    background-image: url(images/birthday-girl-resized-1436x2085.6.jpg);
-    background-size: cover;
-    background-position: center center;
+    
+    background: #111458;
+    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 
 nav{
-    background: hsla(0, 0%, 100%, 0.05);
+    background-color: hsl(0deg 0% 100% / 10%);
     width: 92%;
     height: 4rem;
     position: fixed;
@@ -29,7 +29,7 @@ nav{
     backdrop-filter: blur(9px);
     display: flex;
     justify-content: space-around;
-    gap: 36vw;
+    gap: 30%;
 
 }
 .logo{
@@ -53,16 +53,20 @@ nav{
 .options ul{
     list-style: none;
     display: flex;
-    gap: 3vw;
-}
+      gap: 2.5rem;}
+
 .options  li{
-    font-size: 2.2vw;
+    font-size: 2em;
     font-family: "Allura", cursive;
     font-weight: 700;
 }
 .options a{
     text-decoration: none;
-    color: black;
+    color: rgb(240, 228, 228);
+}
+.options a:hover{
+    text-decoration: none;
+    color: rgb(128, 126, 126);
 }
 
 
@@ -78,13 +82,13 @@ nav{
   
 }
 
-.cover{
+/* .cover{
    
     position: absolute;
     width: 100%;
     height: 450vh;
     background-color: rgb(83 81 81 / 52%);
-}
+} */
 
 .herophoto{
     width: 0;
@@ -136,16 +140,16 @@ nav{
     animation: popQuote 0.4s 1.8s ease-out forwards;
 }
 .quote p {
-    font-size: 29px;
+    font-size: 40px;
     color: #eae3e3;
-    font-family: sans-serif;
+    font-family: 'Allura', cursive;
     opacity: 0;
     animation: popQuote 0.4s 1.8s ease-out forwards;
 }
 .quote span{
     font-size: 24px;
     color: #eae3e3;
-    font-family: sans-serif;
+    font-family: 'Allura', cursive;
     align-self: flex-end;
     opacity: 0;
     animation: popQuote 0.4s 1.8s ease-out forwards;
@@ -153,13 +157,13 @@ nav{
 .main-wish{
     background: #413d3d7a;
     backdrop-filter: blur(5px);
-    width: 89vw;
-    height: 17vw;
+    width: 89%;
+    height: 16rem;
     border-radius: 1vw;
     border: solid 3px white;
-    position: relative;
-    top: 48vw;
-    left: 5vw;
+    position: absolute;
+    top: 47em;
+    left: 5%;
     display: flex;
     flex-direction: column;
 }
@@ -195,14 +199,14 @@ nav{
     align-self: center;
 }
 .messagesfromother{
-    position: relative;
-    top: 54vw;
+    position: absolute;
+    top: 69rem;
     display: flex;
     flex-direction: column;
 }
 .card-slider-container {
     position: relative;
-    width: 87%;
+    width: 85.5%;
     margin: auto;
     overflow: hidden;
 }
@@ -224,7 +228,7 @@ nav{
 .card {
     display: flex;
     flex-direction: column;
-    flex: 0 0 13.3vw; /* Card width */
+    flex: 0 0 12.5rem; /* Card width */
     height: 300px; /* Card height */
     margin: 10px;
     padding: 20px;
@@ -265,8 +269,8 @@ button.next {
 #first-card{
     background-image: url(images/Alex.webp);
     background-size: cover;
-    width: 7vw;
-    height: 7vw;
+    width: 7rem;
+    height: 7rem;
     align-self: center;
     border-radius: 50%;
     border: solid 5px #d5c3c3;
@@ -350,7 +354,7 @@ button.next {
     box-shadow: 0 0 14px 1px grey;
 }
 .message-designation{
-    font-size: 1.5vw;
+    font-size:1.6rem;
     font-family: 'poppins', sans-serif;
     font-weight: 500;
 }
@@ -374,10 +378,11 @@ button.next {
 }
 .seemoremessage{
     align-self: center;
-    margin: 0.5vw;
-    width: 10vw;
-    height: 3vw;
+    margin: 0.5rem;
+    width: 10rem;
+    height: 3rem;
 }
+
 
 .seemoremessage button{
     width: 10vw;
@@ -397,11 +402,11 @@ button.next {
 }
 /* -----------------------------review start--------------------------- */
 .gallery-home{
-    position: relative;
-    top: 59vw;
-    left: 8.5vw;
-    height: 104vh;
-    width: 82vw;
+    position: absolute;
+    top: 104rem;
+    left: 9%;
+    height: 48rem;
+    width: 83%;
     background: #413d3d7a;
     backdrop-filter: blur(5px);
     display: flex;
@@ -422,7 +427,7 @@ button.next {
 .photo-timeline {
     width: 89%;
     margin: 17px auto;
-    height: 88vh;
+    height: 35rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
@@ -432,7 +437,8 @@ button.next {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-    height: 50vh; /* Display two sections at a time */
+    height: 20rem;
+    /* Display two sections at a time */
     opacity: 0; /* Initially hidden */
     transform: translateY(50px); /* Move it slightly down */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
@@ -524,19 +530,27 @@ button.next {
 /* -------------------------------review end------------------------ */
 
 .invite{
-    position: relative;
-    top: 69vw;
+    position: absolute;
+    /* top: 158rem; */
     background: #413d3d7a;
     backdrop-filter: blur(5px);
     
     width: 54vw;
     height: auto;
-    left: 19vw;
+    /* left: 19vw; */
     display: flex;
     flex-direction: column;
     padding: 2rem;
     border: solid 2px #d8cfcf;
     border-radius: 19px;
+}
+.invite-info{
+    width: 31%;
+    height: auto;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .invite-head{
     align-self: center;
@@ -595,15 +609,25 @@ form{
 .form-group-name input{
     width: 16vw;
     height: 2.5vw;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  
     border: solid 2px #edcfcf;
     background: rgba(128, 128, 128, 0.623);
-
+    padding-left: 1rem;
     border-radius: 14px;
+}
+.form-group-name input::placeholder{
+    color: rgb(167, 158, 158);
+    font-size: 0.8rem;
+    padding-left: 0rem;
 }
 .form-group-attendance{
     width: auto;
     height: auto;
 }
+
 .form-group-attendance label{
     font-size: 1.2vw;
     font-family: 'poppins', sans-serif;
@@ -616,10 +640,12 @@ form{
     border: solid 2px white;
     border-radius: 12px;
 }
+
 .form-group-attendance option{
     color: white;
     font-size: 17px;
 }
+
 .form-group-message{
     display: flex;
     gap: 1vw;
@@ -632,9 +658,19 @@ form{
 .form-group-message textarea{
     height: 6vw;
     width: 38vw;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
     background: rgba(128, 128, 128, 0.623);
     border: solid 2px white;
     border-radius: 12px;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+.form-group-message textarea::placeholder{
+    color: rgb(167, 158, 158);
+    font-size: 0.9rem;
+    padding-left: 0rem;
 }
 .form-group-button button{
     width: 10vw;
@@ -643,6 +679,26 @@ form{
     border: solid 3px white;
     background: #c7c7c7;
 }
+.form-group-button button:hover{
+    transform: scale(1.1);
+    border-radius: 12px;
+    border: solid 3px white;
+    background: #7e7b7b;
+}
+
+.outer-invite{
+    background: blue;
+    width: 85%;
+    height: 36rem;
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    top: 158rem;
+    left: 7%;
+    padding: 1rem;
+}
+
+
 @keyframes popUpAndRotatePhoto {
     0% {
         width: 0;

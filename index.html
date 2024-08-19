@@ -14,8 +14,8 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="images/transparent-birthday-cake-64d7171857b366.2050293116918177523592-removebg-preview.png" alt="" id="cake">
-                <img src="images/final-logo.png" id="ang-logo">
+                <img src="images/transparent-birthday-cake-64d7171857b366.2050293116918177523592-removebg-preview.png" alt="" id="cake" draggable="false">
+                <img src="images/final-logo.png" id="ang-logo" draggable="false">
                
             </div>
             <div class="options">
@@ -31,12 +31,12 @@
         <div class="herosection">
 
             <div class="herophoto">
-                <img src="images/birthday-girl.jpg" id="photo-hero" alt="">
+                <img src="images/birthday-girl.jpg" id="photo-hero" alt="" draggable="false">
             </div>
-            <img src="images/birthdaymess.png" id="message-hero" alt="">
+            <img src="images/birthdaymess.png" id="message-hero" alt="" draggable="false">
             <div class="quote">
                 <p>"The more you praise and celebrate your life, the more there is in life to celebeate."</p>
-                <span>- OPRAH WINFREY</span>
+                <span>- Oprah Winfrey</span>
             </div>
         </div>
         <div class="main-wish">
@@ -159,49 +159,56 @@
         
         </div>
 
-        <div class="invite">
-            <div class="invite-head">You are Invited To the Party</div>
-            <div class="invite-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi qui eos incidunt magnam quisquam, quae quis consequuntur enim dignissimos velit aut! Est eaque necessitatibus similique ipsam libero vero labore soluta?</div>
-            <div class="form-container">
-                <form  method="POST">
-                    <!-- First Name -->
-                    <div class="nameofperson">
-                        <div class="form-group-name">
-                            <label for="first-name">First Name:</label>
-                            <input type="text" id="first-name" name="first-name" required>
+        <div class="outer-invite">
+            <div class="invite-info">
+                <div class="location-head">Location of Party</div></div>
+                <div class="location-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae repellendus quos provident facilis asperiores. Tempora praesentium eos ut, minus, cum harum porro eius, obcaecati saepe excepturi pariatur veritatis sequi delectus.</div>
+            </div>
+            <div class="invite">
+                <div class="invite-head">You are Invited To the Party</div>
+                <div class="invite-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi qui eos incidunt magnam quisquam, quae quis consequuntur enim dignissimos velit aut! Est eaque necessitatibus similique ipsam libero vero labore soluta?</div>
+                <div class="form-container">
+                    <form  >
+                        <!-- First Name -->
+                        <div class="nameofperson">
+                            <div class="form-group-name">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                            </div>
+                
+                            <!-- Last Name -->
+                            <div class="form-group-name">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                            </div>
                         </div>
             
-                        <!-- Last Name -->
-                        <div class="form-group-name">
-                            <label for="last-name">Last Name:</label>
-                            <input type="text" id="last-name" name="last-name" required>
+                        <!-- Attendance Dropdown -->
+                        <div class="form-group-attendance">
+                            <label for="attendance">Will you be attending?</label>
+                            <select id="attendance" name="attendance" required>
+                                <option value="">Select an option</option>
+                                <option value="yes">I will be there</option>
+                                <option value="no">Sorry, I can't come</option>
+                            </select>
                         </div>
-                    </div>
-        
-                    <!-- Attendance Dropdown -->
-                    <div class="form-group-attendance">
-                        <label for="attendance">Will you be attending?</label>
-                        <select id="attendance" name="attendance" required>
-                            <option value="">Select an option</option>
-                            <option value="yes">I will be there</option>
-                            <option value="no">Sorry, I can't come</option>
-                        </select>
-                    </div>
-        
-                    <!-- Message Textarea -->
-                    <div class="form-group-message">
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Write something..."></textarea>
-                    </div>
-        
-                    <!-- Submit Button -->
-                    <div class="form-group-button">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
+            
+                        <!-- Message Textarea -->
+                        <div class="form-group-message">
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" rows="4" placeholder="want to say something"></textarea>
+                        </div>
+            
+                        <!-- Submit Button -->
+                        <div class="form-group-button">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+               
             </div>
-            <div class="pop"></div>
         </div>
+
     </main>
 
     <script src="script.js"></script>
