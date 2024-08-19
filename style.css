@@ -8,6 +8,31 @@
     padding: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 7px; 
+}
+
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 0;
+    background-color: rgba(227, 208, 208, 0.269); 
+    backdrop-filter: blur(5px);
+
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #179ae1; 
+    border-radius: 7px;
+    /* border: 2px solid #f1f1f1;  */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color when hovering */
+}
+
 body{
     width: 100%;
     height:450vh;
@@ -102,6 +127,7 @@ nav{
     transform: rotate(-10deg);
     animation: popUpAndRotate 0.9s ease-in forwards;
     z-index: 10;
+    box-shadow: 0 0 20px 2px rgb(218, 212, 212);
 }
 #photo-hero{
     width: 0;
@@ -154,18 +180,46 @@ nav{
     opacity: 0;
     animation: popQuote 0.4s 1.8s ease-out forwards;
 }
+.crown{
+    width: 9rem;
+    z-index: 10;
+    /* background: red; */
+    height: 9rem;
+    position: absolute;
+    top: 4rem;
+    left: 22rem;
+    transform: rotate(-5deg);
+   
+}
+.crown img{
+    width: 0;
+    animation: crownPop 0.6s 2.2s ease-in-out forwards;
+}
+
+.flower{
+    position: absolute;
+    z-index: 10;
+    top: 35rem;
+    left: 13%;
+}
+.flower img{
+    width: 0;
+    animation: crownPop 0.6s 2.2s ease-in-out forwards;
+}
 .main-wish{
     background: #413d3d7a;
     backdrop-filter: blur(5px);
     width: 89%;
     height: 16rem;
     border-radius: 1vw;
-    border: solid 3px white;
+    border: solid 1px white;
+    box-shadow: 0 0 25px 3px grey;
     position: absolute;
     top: 47em;
     left: 5%;
     display: flex;
     flex-direction: column;
+    
 }
 
 #wish-headline{
@@ -413,7 +467,9 @@ button.next {
     flex-direction: column;
     align-items: center;
    
-    border: solid 2px #d5c3c3;
+    border: solid 1px white;
+    box-shadow: 0 0 25px 3px grey;
+
     border-radius: 34px;
 }
 .gallery-head{
@@ -514,23 +570,24 @@ button.next {
     background-color: rgb(143, 139, 139);
 }
 .photo-timeline::-webkit-scrollbar {
-    width: 8px; /* Adjust the width of the scrollbar */
+    width: 7px; /* Adjust the width of the scrollbar */
 }
 
 .photo-timeline::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background color of the scrollbar track */
+    background: #f1f1f1; 
+    border-radius: 3px;
 }
 
 .photo-timeline::-webkit-scrollbar-thumb {
     background-color: #676464; /* Scrollbar color */
     border-radius: 15px; /* Rounded corners for the scrollbar */
-    border: 2px solid #f1f1f1; /* Adds a border around the scrollbar thumb */
+    border: 1px solid #f1f1f1; /* Adds a border around the scrollbar thumb */
 }
 
 /* -------------------------------review end------------------------ */
 
 .invite{
-    position: absolute;
+    /* position: absolute; */
     /* top: 158rem; */
     background: #413d3d7a;
     backdrop-filter: blur(5px);
@@ -541,16 +598,18 @@ button.next {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    border: solid 2px #d8cfcf;
+    border: solid 1px white;
+    box-shadow: 0 0 25px 3px grey;
+
     border-radius: 19px;
 }
 .invite-info{
     width: 31%;
     height: auto;
-    background: red;
+    /* background: red; */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 2rem; */
 }
 .invite-head{
     align-self: center;
@@ -687,7 +746,7 @@ form{
 }
 
 .outer-invite{
-    background: blue;
+    /* background: blue; */
     width: 85%;
     height: 36rem;
     display: flex;
@@ -696,6 +755,98 @@ form{
     top: 158rem;
     left: 7%;
     padding: 1rem;
+}
+.party{
+    position: absolute;
+    z-index: 10;
+    top: -7rem;
+    right: 8%;
+    width: 2rem;
+    height: 14rem;
+}
+.party img{
+    width: 11rem;
+    /* animation: crownPop 0.6s 2.2s ease-in-out forwards; */
+}
+.location-head{
+    font-family: 'Allura', cursive;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    align-self: center;
+    margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+.location-info{
+    font-family: 'poppins', sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem;
+}
+#phone, #email{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    /* align-self: center; */
+    padding-left: 1rem;
+    color: white;
+    align-items: center;
+}
+.videomeet{
+    background: #26e835;
+    width: 10rem;
+    height: 3rem;
+    z-index: 390;
+    display: flex;
+    gap: 1rem;
+    /* font-size: 2rem; */
+    border-radius: 12px;
+    align-items: center;
+    padding: 12px;
+    position: fixed;
+    right: 15px;
+    top: 36.5rem;
+    box-shadow: 0 0 16px 1px white;
+    animation: levitate 2s ease-in-out infinite;
+   
+}
+.videomeet:hover{
+    animation-play-state: paused; /* Pauses the levitation animation */
+    transform: scale(1.1); /* Example of a hover effect: slightly enlarges the element */
+}
+.videomeet i{
+    font-size: 2rem;
+    align-self: center;
+}
+.videomeet p{
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+footer{
+    position: absolute;
+    top: 201rem;
+    background: #110f42;
+    /* bottom: 0; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #c8c5c5;
+    font-size: 15px;
+    padding: 13px 0 12px 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.love{
+    display: flex;
+    gap: 11px;
+    justify-content: center;
 }
 
 
@@ -731,5 +882,27 @@ form{
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+@keyframes crownPop {
+    0% {
+       transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        width: 9rem;
+    }
+}
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
