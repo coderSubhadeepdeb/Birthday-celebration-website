@@ -68,3 +68,8 @@ sections.forEach(section => {
 
 
 // -------------------------review----------------------------------
+const galleryseemore= document.querySelector('#gallery-button');
+
+galleryseemore.addEventListener('click', ()=>{
+    window.location.href='gallery.html';
+});
