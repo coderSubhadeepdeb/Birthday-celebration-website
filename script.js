@@ -73,3 +73,14 @@ const galleryseemore= document.querySelector('#gallery-button');
 galleryseemore.addEventListener('click', ()=>{
     window.location.href='gallery.html';
 });
+const wishseemore= document.querySelector('#wishseemore');
+
+wishseemore.addEventListener('click', ()=>{
+    window.location.href='message.html';
+});
+
+const formsubmission= document.querySelector("#home-page-form-bottom");
+formsubmission.addEventListener('submit', (event)=>{
+    event.preventDefault();
+   formsubmission.reset();
+});

@@ -6,13 +6,21 @@
         padding: 0;
     
 }
+html{
+    width: 100%;
+    height:180em;
+}
 body{
     width: 100%;
-    height: auto;
+    height: 100%;
     
     background: #111458;
     /* background-position: center center; */
     background-repeat: no-repeat;
+}
+main{
+    width: 100%;
+    height: 100%;
 }
 body::-webkit-scrollbar {
     width: 7px; 
@@ -394,6 +402,215 @@ nav{
     border-radius: 1.5em;
     box-shadow: 0 0 20px 1px white;
 }
+
+.gallery-form{
+    width: 80%;
+    height: 30em;
+    background: #80808024;
+    position: absolute;
+    top: 144em;
+    left: 10%;
+    border-radius: 20px;
+    border: solid 1px white;
+    box-shadow: 0 0 25px 3px #ffffff59;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-form-head{
+    font-family: 'Allura', cursive;
+    font-size: 4.3em;
+    font-weight: 700;
+    color: white;
+}  
+.gallery-form-inner{
+    /* background: red; */
+    width: 87%;
+    height: 65%;
+}
+.gallery-form-inner form{
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+.sender-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.sender-name-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+.sender-name-one label{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+}
+.sender-name-one input{
+    width: 21em;
+    height: 4em;
+    border-radius: 38px;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    padding-left: 1em;
+    border-bottom: solid 4px #ffffff73;
+    background: #594d4d70;
+    border-top: solid 0px #80808000;
+    border-left: solid 0px;
+    border-right: solid 0px;
+}
+.sender-name-one input::placeholder{
+    color: rgb(156, 151, 151);
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+.sender-name-two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+.sender-name-two label{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+}
+.sender-name-two input{
+    width: 21em;
+    height: 4em;
+    border-radius: 38px;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    padding-left: 1em;
+    border-bottom: solid 4px #ffffff73;
+    background: #594d4d70;
+    border-top: solid 0px #80808000;
+    border-left: solid 0px;
+    border-right: solid 0px;
+}
+.sender-name-two input::placeholder{
+    color: rgb(156, 151, 151);
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+   
+}
+
+.attachimage{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 0.5em;
+    padding: 20px 29% 20px 10%;
+}
+.attachimage label{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+}
+.attachimage input{
+    width: 18em;
+    /* height: 1em; */
+    font-size: 1.5em;
+    color: white;
+}
+
+.sender-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 10px;
+}
+.sender-message label{
+    font-size: 1.2em;
+    font-family: 'poppins', sans-serif;
+    color: white;
+    font-weight: 500;
+}
+.sender-message textarea{
+    width: 66%;
+    height: 5em;
+    border-radius: 49px;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    padding-left: 3em;
+    align-content: center;
+    background: #594d4d70;
+    border-bottom: solid 7px #ffffff6b;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.sender-message textarea::placeholder{
+    color: rgb(156, 151, 151);
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.sender-submit-button{
+    width: 10em;
+    height: 3.5em;
+    margin: 12px 0px 11px 40%;
+}
+.sender-submit-button button{
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    border: solid 6px grey;
+    background: white;
+    font-size: 1.2em;
+    color: grey;
+    font-weight: 500;
+}
+.sender-submit-button button:hover{
+    transform: scale(1.1);
+    border-radius: 32px;
+    border: solid 6px white;
+    background: rgb(123, 121, 121);
+    font-size: 1.2em;
+    color: rgb(255, 252, 252);
+    font-weight: 500;
+}
+footer{
+    position: absolute;
+    /* top: 201rem; */
+    background: #110f42;
+    /* bottom: 0; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #c8c5c5;
+    font-size: 15px;
+    padding: 13px 0 12px 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.love{
+    display: flex;
+    gap: 11px;
+    justify-content: center;
+}
+
 /* -----------------------keyframes--------------------- */
 
 @keyframes popWelcome {

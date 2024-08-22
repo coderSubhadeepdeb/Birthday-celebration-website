@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    
+        margin: 0;
+        padding: 0;
+    
+}
+html{
+    width: 100%;
+    height:170em;
+}
+body{
+    width: 100%;
+    height: 100%;
+    
+    background: #111458;
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+body::-webkit-scrollbar {
+    width: 7px; 
+}
+
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 0;
+    background-color: rgba(227, 208, 208, 0.269); 
+    backdrop-filter: blur(5px);
+
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #179ae1; 
+    border-radius: 7px;
+    /* border: 2px solid #f1f1f1;  */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color when hovering */
+}
+
+
+nav{
+    background-color: hsl(0deg 0% 100% / 10%);
+    width: 92%;
+    height: 4rem;
+    position: fixed;
+    z-index: 20;
+    border-radius: 3rem;
+    left: 4%;
+    top: 2%;
+    backdrop-filter: blur(9px);
+    display: flex;
+    justify-content: space-around;
+    gap: 30%;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+#ang-logo{
+    width: 9rem;
+    height: 3.5rem;
+    align-self: flex-end;
+}
+#cake{
+    width: 3rem;
+    height: 3rem;
+    align-self: center;
+}
+.options{
+    display: flex;
+    align-items: center;
+}
+.options ul{
+    list-style: none;
+    display: flex;
+      gap: 2.5rem;}
+
+.options  li{
+    font-size: 2em;
+    font-family: "Allura", cursive;
+    font-weight: 700;
+}
+.options a{
+    text-decoration: none;
+    color: rgb(240, 228, 228);
+}
+.options a:hover{
+    text-decoration: none;
+    color: rgb(128, 126, 126);
+}
+
+.message-welcomeline{
+    position: relative;
+    top: 1.8em;
+    /* display: flex; */
+    text-align: center;
+    font-size: 7em;
+    font-family: 'Allura', cursive;
+    font-weight: 700;
+    color: white;
+    animation: popWelcomeMessage 0.9s ease-in-out forwards;
+    
+}
+
+.messages{
+    opacity: 0; /* Initially hidden */
+    transform: translateY(40px); /* Start slightly below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    width: 80%;
+    /* background: red; */
+    height: auto;
+    position: absolute;
+    top: 25em;
+    left: 9%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.messages.show {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Move to original position */
+}
+.chat-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+  
+}
+
+.chat-container:hover {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+    transform: scale(1.1);
+  
+}
+  
+  
+  /* .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  } */
+  
+  .message-box {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px 15px 15px 15px;
+    max-width: 77%;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 3px 6px 9px 0px #ab8419a8;
+    
+  }
+  .message-box:hover {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px 15px 15px 15px;
+    max-width: 77%;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 3px 6px 9px 1px #ab8419;
+    
+  }
+  
+  /* Create the pointed corner */
+  .message-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -19px; /* Adjust this based on your margin and spacing */
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent  #ffffff transparent transparent;
+    transform: translateY(-50%);
+  }
+  .message-sender{
+    font-size: 1.8em;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+}
+  
+.given-message{
+    font-size: 18px;
+    font-family: 'poppins', sans-serif;
+}
+
+#one-photo{
+    background-image: url(images/dadpic.webp);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#two-photo{
+    background-image: url(images/mompic.jpg);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#three-photo{
+    background-image: url(images/Alex.webp);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#four-photo{
+    background-image: url(images/amanda.jpg);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#five-photo{
+    background-image: url(images/trophy.jpg);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#six-photo{
+    background-image: url(images/philipes.webp);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#seven-photo{
+    background-image: url(images/zendya.avif);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#eight-photo{
+    background-image: url(images/brother.jpg);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#nine-photo{
+    background-image: url(images/concert.webp);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+#ten-photo{
+    background-image: url(images/nazia.avif);
+    background-size: cover;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: solid 6px #e8e2e2;
+    box-shadow: 0 0 16px 3px #ab8419;
+}
+
+
+
+.wishing-form-formessage{
+    width: 80%;
+    height: 30em;
+    background: #80808024;
+    position: absolute;
+    top: 135em;
+    left: 10%;
+    border-radius: 20px;
+    border: solid 1px white;
+    box-shadow: 0 0 25px 3px #ffffff59;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.wishing-form-head{
+    font-family: 'Allura', cursive;
+    font-size: 4.3em;
+    font-weight: 700;
+    color: white;
+}  
+.wishing-form-inner{
+    /* background: red; */
+    width: 87%;
+    height: 65%;
+}
+.wishing-form-inner form{
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+.wish-sender{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.sender-name-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+.sender-name-inner label{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+}
+.sender-name-inner input{
+    width: 38em;
+    height: 4em;
+    border-radius: 38px;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    padding-left: 1em;
+    border-bottom: solid 4px #ffffff73;
+    background: #594d4d70;
+    border-top: solid 0px #80808000;
+    border-left: solid 0px;
+    border-right: solid 0px;
+}
+.sender-name-inner input::placeholder{
+    color: rgb(156, 151, 151);
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+
+.send-wish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding-top: 10px;
+}
+.send-wish label{
+    font-size: 1.2em;
+    font-family: 'poppins', sans-serif;
+    color: white;
+    font-weight: 500;
+}
+.send-wish textarea{
+    width: 69%;
+    height: 5em;
+    border-radius: 49px;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    padding-left: 3em;
+    align-content: center;
+    background: #594d4d70;
+    border-bottom: solid 7px #ffffff6b;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.send-wish textarea::placeholder{
+    color: rgb(156, 151, 151);
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.wish-sender-submit-button{
+    width: 10em;
+    height: 3.5em;
+    margin: 12px 0px 11px 40%;
+}
+.wish-sender-submit-button button{
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    border: solid 6px grey;
+    background: white;
+    font-size: 1.2em;
+    color: grey;
+    font-weight: 500;
+}
+.wish-sender-submit-button button:hover{
+    transform: scale(1.1);
+    border-radius: 32px;
+    border: solid 6px white;
+    background: rgb(123, 121, 121);
+    font-size: 1.2em;
+    color: rgb(255, 252, 252);
+    font-weight: 500;
+}
+
+footer{
+    position: absolute;
+    /* top: 201rem; */
+    background: #110f42;
+    /* bottom: 0; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #c8c5c5;
+    font-size: 15px;
+    padding: 13px 0 12px 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.love{
+    display: flex;
+    gap: 11px;
+    justify-content: center;
+}
+
+@keyframes popWelcomeMessage {
+    0% {
+       transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

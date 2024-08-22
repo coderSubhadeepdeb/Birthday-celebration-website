@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="/">Messages</a></li>
+                    <li><a href="message.html">Messages</a></li>
                     <li><a href="/">Surprise Gift!</a></li>
                 </ul>
             </div>
@@ -62,9 +63,48 @@
             </div>
         </div>
 
-        
+        <div class="gallery-form">
+            <div class="gallery-form-head">
+                    <p>Want to contribute to the Gallery!</p>
+            </div>
+            <div class="gallery-form-inner">
+                <form method="post" name="imagepost" id="gallery-imagesub-form">
+                    <div class="sender-name">
+                        <div class="sender-name-one">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="sender-first-name" name="first-name" placeholder="First Name" required>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="sender-name-two">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="sender-last-name" name="last-name" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="attachimage">
+                        <label for="imagefile">Select the Image:</label>
+                        <input type="file" name="image" required>
+
+                    </div>
+                    <div class="sender-message">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="A small description about the photo"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="sender-submit-button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footersec">
+            <div class="love"> <p>Made with</p><i class="fa-solid fa-heart"></i></div>
+             <p>&copy; 2024 Angelina by Jegtheme. All rights reserved.</p></p>
+         </div>
+    </footer>
 <script src="gallery.js"></script>
 </body>
 
