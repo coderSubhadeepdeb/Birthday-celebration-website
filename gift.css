@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    
+        margin: 0;
+        padding: 0;
+    
+}
+html{
+    width: 100%;
+    height:180em;
+}
+body{
+    width: 100%;
+    height: 100%;
+    
+    background: #111458;
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+body::-webkit-scrollbar {
+    width: 7px; 
+}
+
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 0;
+    background-color: rgba(227, 208, 208, 0.269); 
+    backdrop-filter: blur(5px);
+
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #179ae1; 
+    border-radius: 7px;
+    /* border: 2px solid #f1f1f1;  */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color when hovering */
+}
+
+
+nav{
+    background-color: hsl(0deg 0% 100% / 10%);
+    width: 92%;
+    height: 4rem;
+    position: fixed;
+    z-index: 20;
+    border-radius: 3rem;
+    left: 4%;
+    top: 2%;
+    backdrop-filter: blur(9px);
+    display: flex;
+    justify-content: space-around;
+    gap: 30%;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+#ang-logo{
+    width: 9rem;
+    height: 3.5rem;
+    align-self: flex-end;
+}
+#cake{
+    width: 3rem;
+    height: 3rem;
+    align-self: center;
+}
+.options{
+    display: flex;
+    align-items: center;
+}
+.options ul{
+    list-style: none;
+    display: flex;
+      gap: 2.5rem;}
+
+.options  li{
+    font-size: 2em;
+    font-family: "Allura", cursive;
+    font-weight: 700;
+}
+.options a{
+    text-decoration: none;
+    color: rgb(240, 228, 228);
+}
+.options a:hover{
+    text-decoration: none;
+    color: rgb(128, 126, 126);
+}
+.inner-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background: rebeccapurple; */
+    width: 80%;
+    height: auto;
+    gap: 3em;
+    /* align-items: center; */
+    padding: 3em;
+    position: absolute;
+    left: 7%;
+    top: 10em;
+    gap: 5em;
+}
+.video-container {
+    height: 27em;
+    width: 48em;
+    /* display: flex; */
+    overflow: hidden;
+    max-width: 48em;
+    max-height: 85%;
+    background: #000;
+    align-self: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 2px white;
+}
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.surprise{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.giftpage-welcome{
+    font-family: 'Allura', cursive;
+    font-size: 6em;
+    color: white;
+    font-weight: 600;
+}
+.giftpage-welcome-second{
+    font-family: 'Allura', cursive;
+    font-size: 3em;
+    color: white;
+    font-weight: 600;
+}
+.giftpage-welcome-third{
+    font-family: 'Allura', cursive;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------- */
+
+.giftpage-gift{
+    perspective: 1000px; /* Enables 3D perspective for the flip effect */
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 5em;
+    flex-wrap: wrap;
+    padding: 2em;
+    justify-content: center;
+    align-content: center;
+    margin: 4em;
+}
+
+.card {
+    width: 316px;
+    height: 266px;
+    position: relative;
+    transform-style: preserve-3d; /* Allows 3D transformations */
+    transition: transform 0.6s; /* Smooth flip transition */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickability */
+}
+
+.card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6b6bb3;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 26px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    color: #ab9e9e;
+}
+.card-back-one{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-two{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-three{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-four{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-five{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-six{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-seven{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-eight{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-back-nine{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    /* background-image: url(images/Alex.webp); */
+    /* background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card-back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg); /* Starts with the back side flipped */
+}
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center; /* Centers the image within the container */
+}
+
+.card.flipped {
+    transform: rotateY(180deg); /* Flips the card to reveal the back side */
+}
+
+
+footer{
+    position: absolute;
+    /* top: 201rem; */
+    background: #110f42;
+    /* bottom: 0; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #c8c5c5;
+    font-size: 15px;
+    padding: 13px 0 12px 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.love{
+    display: flex;
+    gap: 11px;
+    justify-content: center;
+}
