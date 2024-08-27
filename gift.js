@@ -1,50 +1,41 @@
-// script.js
+// Select all flip containers
+const flipContainers = document.querySelectorAll('.flip-container');
+const popClose = document.querySelector('.close-btn');
+const popOuter = document.getElementById('surprisePop');
+const popPhoto = document.getElementById('photosurprisePop');
 
-// Get the card element
-const cardone = document.getElementById("flip-card-one");
-const cardtwo = document.getElementById("flip-card-two");
-const cardthree = document.getElementById("flip-card-three");
-const cardfour = document.getElementById("flip-card-four");
-const cardfive = document.getElementById("flip-card-five");
-const cardsix = document.getElementById("flip-card-six");
-const cardseven = document.getElementById("flip-card-seven");
-const cardeight = document.getElementById("flip-card-eight");
-const cardnine = document.getElementById("flip-card-nine");
+// Flag to track if a div has been clicked
+let gameActive = true;
 
-// Add click event listener to the card
-cardone.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardone.classList.toggle("flipped");
+// Add click event listener to each flip container
+flipContainers.forEach(container => {
+  container.addEventListener('click', function() {
+    if (gameActive) { // Only allow click if game is active
+      this.classList.add('clicked'); // Flip the clicked div
+      gameActive = false; // Set game to inactive after one div is flipped
+
+      // Add blocked class to all containers to prevent further clicks
+      flipContainers.forEach(cont => {
+        cont.classList.add('blocked');
+      });
+
+      const backgroundImage = this.querySelector('.back').style.backgroundImage;
+      const imageUrl = backgroundImage.slice(5, -2);
+
+      popPhoto.style.backgroundImage = `url(${imageUrl})`;
+
+      setTimeout(()=>{
+        popOuter.classList.remove('hidden');
+      },700);
+    }
+  });
 });
-cardtwo.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardtwo.classList.toggle("flipped");
-});
-cardthree.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardthree.classList.toggle("flipped");
-});
-cardfour.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardfour.classList.toggle("flipped");
-});
-cardfive.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardfive.classList.toggle("flipped");
-});
-cardsix.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardsix.classList.toggle("flipped");
-});
-cardseven.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardseven.classList.toggle("flipped");
-});
-cardeight.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardeight.classList.toggle("flipped");
-});
-cardnine.addEventListener("click", function() {
-    // Toggle the flip class on click
-    cardnine.classList.toggle("flipped");
-});
+
+
+popClose.addEventListener('click', () => {
+    // Hide the popup
+    popOuter.classList.add('hidden');
+  
+    
+  });
+
